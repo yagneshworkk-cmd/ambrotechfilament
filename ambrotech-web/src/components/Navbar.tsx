@@ -1,10 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Navbar.module.css";
 
 const navLinks = [
-  { label: "Home", href: "#" },
+  { label: "Home", href: "/" },
   { label: "About Us", href: "#about" },
   { label: "Products", href: "#products" },
   { label: "Industries", href: "#industries" },
@@ -27,7 +28,7 @@ export default function Navbar() {
       id="mainNav"
       className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}
     >
-      <a href="#" className={styles.logo} style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
+      <Link href="/" className={styles.logo} style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
         <Image 
           src="/images/logos/ambrotech-logo.jpeg" 
           alt="Ambrotech Filament Logo" 
@@ -40,7 +41,7 @@ export default function Navbar() {
           <b style={{ fontSize: '20px', lineHeight: '1.2', color: '#fff', fontFamily: 'var(--font-heading)' }}>Ambrotech</b>
           <span style={{ fontSize: '12px', letterSpacing: '2px', color: 'var(--cyan)', textTransform: 'uppercase' }}>Filament</span>
         </div>
-      </a>
+      </Link>
 
       <ul className={`${styles.center} ${menuOpen ? styles.centerOpen : ""}`}>
         {navLinks.map((link) => (
