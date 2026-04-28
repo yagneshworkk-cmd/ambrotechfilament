@@ -82,13 +82,20 @@ export default function Footer() {
         <div className={styles.col}>
           <h5>Contact</h5>
           <ul>
-            {contactItems.map((c) => (
-              <li key={c.text}>
-                <a href={c.href || "#"}>
-                  {c.icon} {c.text}
-                </a>
-              </li>
-            ))}
+            {contactItems.map((c) => {
+              const isExternal = c.href && c.href.startsWith("http");
+              return (
+                <li key={c.text}>
+                  <a 
+                    href={c.href || "#"}
+                    target={isExternal ? "_blank" : undefined}
+                    rel={isExternal ? "noopener noreferrer" : undefined}
+                  >
+                    {c.icon} {c.text}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
