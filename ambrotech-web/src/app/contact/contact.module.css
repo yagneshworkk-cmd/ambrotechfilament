@@ -1,12 +1,11 @@
 .page {
-  padding-top: 80px;
   background: var(--offwhite);
   min-height: 100vh;
 }
 
 .hero {
   background: linear-gradient(135deg, var(--ink2) 0%, #0c1f48 50%, #1254c7 100%);
-  padding: 100px 20px 80px;
+  padding: 160px 20px 100px;
   text-align: center;
   position: relative;
   overflow: hidden;
