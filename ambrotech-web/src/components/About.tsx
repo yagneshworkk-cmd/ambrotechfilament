@@ -22,12 +22,9 @@ export default function About() {
         <div className={styles.visualCol}>
           <div className={styles.mainCard} style={{ position: 'relative', overflow: 'hidden' }}>
             <Image src="/images/products/yarn-collection.jpeg" alt="Ambrotech Manufacturing Excellence" fill style={{ objectFit: 'cover' }} />
-            <div className={styles.bgPattern} style={{ background: 'rgba(10, 22, 40, 0.75)' }} />
-            <div style={{ position: 'relative', zIndex: 2, display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'space-between' }}>
-              <div className={styles.mainLogo} style={{ position: 'relative', top: 'auto', left: 'auto' }}>
-                <div className={styles.alm}>AF</div>
-                <span>Ambrotech Filament</span>
-              </div>
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10, 22, 40, 0.9) 0%, rgba(10, 22, 40, 0.2) 100%)', zIndex: 1 }} />
+            <div className={styles.bgPattern} style={{ zIndex: 1 }} />
+            <div style={{ position: 'relative', zIndex: 2, display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'flex-end' }}>
               <div>
                 <div className={styles.mainTitle}>
                   Manufacturing<br />Excellence
