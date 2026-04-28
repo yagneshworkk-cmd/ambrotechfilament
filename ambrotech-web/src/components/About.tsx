@@ -24,7 +24,7 @@ export default function About() {
             <Image src="/images/products/yarn-collection.jpeg" alt="Ambrotech Manufacturing Excellence" fill style={{ objectFit: 'cover' }} />
             <div className={styles.bgPattern} style={{ background: 'rgba(10, 22, 40, 0.75)' }} />
             <div style={{ position: 'relative', zIndex: 2, display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'space-between' }}>
-              <div className={styles.mainLogo}>
+              <div className={styles.mainLogo} style={{ position: 'relative', top: 'auto', left: 'auto' }}>
                 <div className={styles.alm}>AF</div>
                 <span>Ambrotech Filament</span>
               </div>
