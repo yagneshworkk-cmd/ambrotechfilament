@@ -3,19 +3,19 @@ import Link from "next/link";
 import styles from "./Footer.module.css";
 
 const productLinks = [
-  "Polyester Monofilament",
-  "Fishing Net Yarn",
-  "Agricultural Net Yarn",
-  "Industrial Filament",
-  "Custom Solutions",
+  { label: "Polyester Monofilament", href: "/#products" },
+  { label: "Fishing Net Yarn", href: "/#products" },
+  { label: "Agricultural Net Yarn", href: "/#products" },
+  { label: "Industrial Filament", href: "/#products" },
+  { label: "Custom Solutions", href: "/contact" },
 ];
 
 const companyLinks = [
-  "About Us",
-  "Infrastructure",
-  "Quality Standards",
-  "Industries We Serve",
-  "Contact Us",
+  { label: "About Us", href: "/about" },
+  { label: "Infrastructure", href: "#" },
+  { label: "Quality Standards", href: "/#quality" },
+  { label: "Industries We Serve", href: "/#industries" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 const contactItems = [
@@ -64,8 +64,8 @@ export default function Footer() {
           <h5>Products</h5>
           <ul>
             {productLinks.map((l) => (
-              <li key={l}>
-                <a href="#">{l}</a>
+              <li key={l.label}>
+                <Link href={l.href}>{l.label}</Link>
               </li>
             ))}
           </ul>
@@ -75,8 +75,8 @@ export default function Footer() {
           <h5>Company</h5>
           <ul>
             {companyLinks.map((l) => (
-              <li key={l}>
-                <a href="#">{l}</a>
+              <li key={l.label}>
+                <Link href={l.href}>{l.label}</Link>
               </li>
             ))}
           </ul>

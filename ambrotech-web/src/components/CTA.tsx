@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./CTA.module.css";
 
 const trustItems = [
@@ -29,7 +30,7 @@ export default function CTA() {
         </p>
 
         <div className={styles.btns}>
-          <a href="#" className={styles.btnPrimary}>
+          <Link href="/contact" className={styles.btnPrimary}>
             Send Inquiry Now
             <svg
               width="16"
@@ -41,7 +42,7 @@ export default function CTA() {
             >
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
-          </a>
+          </Link>
           <a href="https://wa.me/919099788563" className={styles.waBtn} target="_blank" rel="noopener noreferrer">
             <div className={styles.waCircle}>W</div>
             Chat on WhatsApp

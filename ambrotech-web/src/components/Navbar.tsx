@@ -10,7 +10,7 @@ const navLinks = [
   { label: "Products", href: "#products" },
   { label: "Industries", href: "#industries" },
   { label: "Quality", href: "#quality" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -57,7 +57,7 @@ export default function Navbar() {
         <a href="#" className={styles.btnGhost}>
           Infrastructure
         </a>
-        <a href="#contact" className={styles.btnSolid}>
+        <a href="/contact" className={styles.btnSolid}>
           <svg
             width="14"
             height="14"
