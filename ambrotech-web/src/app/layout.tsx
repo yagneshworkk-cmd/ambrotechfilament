@@ -28,6 +28,9 @@ export const metadata = {
       "Engineered for Strength. Designed for Zero Break Performance. Powering industries across 10+ countries.",
     type: "website",
   },
+  icons: {
+    icon: '/icon.png?v=2',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
