@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./Footer.module.css";
 
 const productLinks = [
@@ -29,11 +30,17 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.top}>
         <div className={styles.brand}>
-          <div className={styles.brandLogo}>
-            <div className={styles.logoMark}>AF</div>
-            <div className={styles.logoText}>
-              <b>Ambrotech</b>
-              <span>Filament</span>
+          <div className={styles.brandLogo} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <Image 
+              src="/images/logos/ambrotech-logo.jpeg" 
+              alt="Ambrotech Filament Logo" 
+              width={64} 
+              height={64} 
+              style={{ borderRadius: '8px', objectFit: 'contain', background: '#fff', padding: '4px' }}
+            />
+            <div className={styles.logoText} style={{ display: 'flex', flexDirection: 'column' }}>
+              <b style={{ fontSize: '24px', lineHeight: '1.2', color: '#fff', fontFamily: 'var(--font-heading)' }}>Ambrotech</b>
+              <span style={{ fontSize: '13px', letterSpacing: '2px', color: 'var(--cyan)', textTransform: 'uppercase' }}>Filament</span>
             </div>
           </div>
           <p>

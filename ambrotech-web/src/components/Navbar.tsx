@@ -27,18 +27,18 @@ export default function Navbar() {
       id="mainNav"
       className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}
     >
-      <a href="#" className={styles.logo}>
+      <a href="#" className={styles.logo} style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
         <Image 
           src="/images/logos/ambrotech-logo.jpeg" 
-          alt="Ambrotech Filament" 
-          width={44} 
-          height={44} 
+          alt="Ambrotech Filament Logo" 
+          width={56} 
+          height={56} 
           className={styles.logoImg}
-          style={{ borderRadius: '8px', objectFit: 'cover' }}
+          style={{ borderRadius: '8px', objectFit: 'contain', background: '#fff', padding: '4px' }}
         />
-        <div className={styles.logoText}>
-          <b>Ambrotech</b>
-          <span>Filament</span>
+        <div className={styles.logoText} style={{ display: 'flex', flexDirection: 'column' }}>
+          <b style={{ fontSize: '20px', lineHeight: '1.2', color: '#fff', fontFamily: 'var(--font-heading)' }}>Ambrotech</b>
+          <span style={{ fontSize: '12px', letterSpacing: '2px', color: 'var(--cyan)', textTransform: 'uppercase' }}>Filament</span>
         </div>
       </a>
 
