@@ -18,11 +18,11 @@ const companyLinks = [
 ];
 
 const contactItems = [
-  { icon: "📍", text: "Bhavnagar, Gujarat, India" },
-  { icon: "📞", text: "+91 XXXXXXXXXX" },
-  { icon: "✉️", text: "info@ambrotechfilament.com" },
-  { icon: "🌐", text: "ambrotechfilament.com" },
-  { icon: "💬", text: "WhatsApp Business" },
+  { icon: "📍", text: "Bhavnagar, Gujarat, India", href: "#" },
+  { icon: "📞", text: "+91 90997 88563", href: "tel:+919099788563" },
+  { icon: "✉️", text: "ambtotechfilament99@gmail.com", href: "mailto:ambtotechfilament99@gmail.com" },
+  { icon: "🌐", text: "ambrotechfilament.com", href: "#" },
+  { icon: "💬", text: "WhatsApp Business", href: "https://wa.me/919099788563" },
 ];
 
 export default function Footer() {
@@ -84,7 +84,7 @@ export default function Footer() {
           <ul>
             {contactItems.map((c) => (
               <li key={c.text}>
-                <a href="#">
+                <a href={c.href || "#"}>
                   {c.icon} {c.text}
                 </a>
               </li>

@@ -42,7 +42,7 @@ export default function CTA() {
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </a>
-          <a href="https://wa.me/91XXXXXXXXXX" className={styles.waBtn}>
+          <a href="https://wa.me/919099788563" className={styles.waBtn}>
             <div className={styles.waCircle}>W</div>
             Chat on WhatsApp
           </a>
